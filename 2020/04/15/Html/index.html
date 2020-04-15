@@ -7,13 +7,20 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="HTML 面试知识点总结本部分主要是笔者在复习 HTML 相关知识和一些相关面试题时所做的笔记，如果出现错误，希望大家指出！ 目录 1. DOCTYPE 的作用是什么？ 2. 标准模式与兼容模式各有什么区别？ 3. HTML5 为什么只需要写 &amp;lt;!DOCTYPE HTML&amp;gt;，而不需要引入 DTD？ 4. SGML 、 HTML 、XML 和 XHTML 的区别？ 5. DTD 介绍 6">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2020/04/15/Html/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="HTML 面试知识点总结本部分主要是笔者在复习 HTML 相关知识和一些相关面试题时所做的笔记，如果出现错误，希望大家指出！ 目录 1. DOCTYPE 的作用是什么？ 2. 标准模式与兼容模式各有什么区别？ 3. HTML5 为什么只需要写 &amp;lt;!DOCTYPE HTML&amp;gt;，而不需要引入 DTD？ 4. SGML 、 HTML 、XML 和 XHTML 的区别？ 5. DTD 介绍 6">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://cavszhouyou-1254093697.cos.ap-chongqing.myqcloud.com/note-14.png">
+<meta property="og:image" content="https://cavszhouyou-1254093697.cos.ap-chongqing.myqcloud.com/note-13.png">
+<meta property="og:updated_time" content="2020-04-10T11:15:10.968Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="HTML 面试知识点总结本部分主要是笔者在复习 HTML 相关知识和一些相关面试题时所做的笔记，如果出现错误，希望大家指出！ 目录 1. DOCTYPE 的作用是什么？ 2. 标准模式与兼容模式各有什么区别？ 3. HTML5 为什么只需要写 &amp;lt;!DOCTYPE HTML&amp;gt;，而不需要引入 DTD？ 4. SGML 、 HTML 、XML 和 XHTML 的区别？ 5. DTD 介绍 6">
+<meta name="twitter:image" content="https://cavszhouyou-1254093697.cos.ap-chongqing.myqcloud.com/note-14.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,9 +67,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Html" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Html" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/04/15/Html/" class="article-date">
   <time datetime="2020-04-15T06:18:20.786Z" itemprop="datePublished">2020-04-15</time>
@@ -662,165 +667,19 @@ er的帐号信息进行展示。并在客户端点击确认后，获得服务器
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-JS的for循环总是弹出最后一个值" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/07/09/JS的for循环总是弹出最后一个值/" class="article-date">
-  <time datetime="2019-07-09T14:23:03.280Z" itemprop="datePublished">2019-07-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>@<a href="JS的for循环总是弹出最后一个值">TOC</a><br>之前一直看到“闭包”，知道这是个js三座大山之一，也尝试过在书中找这部分出来看，看得也不是很懂。今天终于在实践中碰到这个问题了。</p>
-<p>for循环总是弹出最后一个值，console.log(i)打印了三个3， console.log(flag)打印了三个undefined。<br>上图：<br><img src="https://img-blog.csdnimg.cn/20190709221822408.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNzc4NzI5NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2019070922183670.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNzc4NzI5NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>找到解决方法之一就是使用闭包：<br>(function(i){</p>
-<p>})(i)<br><img src="https://img-blog.csdnimg.cn/20190709221917786.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNzc4NzI5NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190709221930724.png" alt="在这里插入图片描述"><br>成功解决！还有另外几种解决方案<br>链接: <a href="![https://segmentfault.com/a/1190000013141641](https://img-blog.csdnimg.cn/20190709222018816.png)">JS的for循环总是弹出最后一个值的解决方案</a>.</p>
+  
+    <a href="/2019/07/09/JS的for循环总是弹出最后一个值/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/09/JS的for循环总是弹出最后一个值/" data-id="ck90xx5du0003hcva885g4xdl" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-搭建自己的个人博客" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/07/07/搭建自己的个人博客/" class="article-date">
-  <time datetime="2019-07-07T13:46:02.000Z" itemprop="datePublished">2019-07-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/07/搭建自己的个人博客/">&#39;搭建自己的个人博客&#39;</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.安装好node.js  npm<br>2.通过cnpm使用淘宝镜像<br>    npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a><br>3.安装hexo<br>    Hexo install –g<br>4.建一个文件夹<br>    D:\blog&gt;hexo init<br>5.启动hexo<br>    D:\blog&gt;hexo s<br>    得到一个访问地址Hexo is running at <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> . Press Ctrl+C to stop.<br>6.新建一篇博客<br>    hexo n “我的第一篇博客“<br>7.在githhub上新建一个properties<br>8.安装hexo的git部署插件<br>     hexo install –-save hexo-deployer-git<br>9.修改配置文件_config.yml（type:后面一定要有空格！！）<br>    # Deployment<br>    ## Docs: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">https://hexo.io/docs/deployment.html</a><br>    deploy:<br>      type: git<br>      repo: <a href="https://github.com/Winnie1024/Winnie1024.github.io.git" target="_blank" rel="noopener">https://github.com/Winnie1024/Winnie1024.github.io.git</a><br>      branch: master</p>
-<p>10.部署 hexo d<br>      <img src="file:///C|/Users/Administrator/Documents/untitled.jpg" alt width="762" height="109"><br>出现问题<br>    YAMLException: can not read an implicit mapping pair; a colon is missed at line 83, column 16:<br>      branch:master<br>原来是branch:后忘记空格了<br>再次报错 ERROR Deployer not found: git<br>原来是刚刚上面npm install –save hexo-deployer-git<br>    save前面是两个—少了一个插件没有安装成功<br>这下好了！！大功告成！<br><img src="file:///C|/Users/Administrator/Documents/untitle.jpg" alt width="939" height="231"></p>
-<p>教程链接<a href="https://www.bilibili.com/video/av44544186" target="_blank" rel="noopener">https://www.bilibili.com/video/av44544186</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/07/搭建自己的个人博客/" data-id="ck90xx5dq0002hcvarabm0nxp" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-我的第一篇博客" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/07/07/我的第一篇博客/" class="article-date">
-  <time datetime="2019-07-07T04:38:00.000Z" itemprop="datePublished">2019-07-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/07/我的第一篇博客/">我的第一篇博客</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>天气：晴</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/07/我的第一篇博客/" data-id="ck90xx5cx0000hcva741vvv01" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/07/07/hello-world/" class="article-date">
-  <time datetime="2019-07-07T04:15:08.704Z" itemprop="datePublished">2019-07-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/07/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/07/hello-world/" data-id="ck90xx5dm0001hcvateuyf5ke" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         

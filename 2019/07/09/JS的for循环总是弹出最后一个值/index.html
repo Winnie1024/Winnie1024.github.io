@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="@TOC之前一直看到“闭包”，知道这是个js三座大山之一，也尝试过在书中找这部分出来看，看得也不是很懂。今天终于在实践中碰到这个问题了。 for循环总是弹出最后一个值，console.log(i)打印了三个3， console.log(flag)打印了三个undefined。上图：找到解决方法之一就是使用闭包：(function(i){ })(i)成功解决！还有另外几种解决方案链接: JS的for">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2019/07/09/JS的for循环总是弹出最后一个值/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="@TOC之前一直看到“闭包”，知道这是个js三座大山之一，也尝试过在书中找这部分出来看，看得也不是很懂。今天终于在实践中碰到这个问题了。 for循环总是弹出最后一个值，console.log(i)打印了三个3， console.log(flag)打印了三个undefined。上图：找到解决方法之一就是使用闭包：(function(i){ })(i)成功解决！还有另外几种解决方案链接: JS的for">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190709221822408.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNzc4NzI5NA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2019070922183670.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNzc4NzI5NA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190709221917786.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNzc4NzI5NA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190709221930724.png">
+<meta property="og:updated_time" content="2019-07-09T14:22:28.246Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="@TOC之前一直看到“闭包”，知道这是个js三座大山之一，也尝试过在书中找这部分出来看，看得也不是很懂。今天终于在实践中碰到这个问题了。 for循环总是弹出最后一个值，console.log(i)打印了三个3， console.log(flag)打印了三个undefined。上图：找到解决方法之一就是使用闭包：(function(i){ })(i)成功解决！还有另外几种解决方案链接: JS的for">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190709221822408.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNzc4NzI5NA==,size_16,color_FFFFFF,t_70">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-JS的for循环总是弹出最后一个值" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/09/JS的for循环总是弹出最后一个值/" class="article-date">
+  <time datetime="2019-07-09T14:23:03.280Z" itemprop="datePublished">2019-07-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>@<a href="JS的for循环总是弹出最后一个值">TOC</a><br>之前一直看到“闭包”，知道这是个js三座大山之一，也尝试过在书中找这部分出来看，看得也不是很懂。今天终于在实践中碰到这个问题了。</p>
+<p>for循环总是弹出最后一个值，console.log(i)打印了三个3， console.log(flag)打印了三个undefined。<br>上图：<br><img src="https://img-blog.csdnimg.cn/20190709221822408.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNzc4NzI5NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2019070922183670.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNzc4NzI5NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>找到解决方法之一就是使用闭包：<br>(function(i){</p>
+<p>})(i)<br><img src="https://img-blog.csdnimg.cn/20190709221917786.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNzc4NzI5NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190709221930724.png" alt="在这里插入图片描述"><br>成功解决！还有另外几种解决方案<br>链接: <a href="![https://segmentfault.com/a/1190000013141641](https://img-blog.csdnimg.cn/20190709222018816.png)">JS的for循环总是弹出最后一个值的解决方案</a>.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/07/09/JS的for循环总是弹出最后一个值/" data-id="ck90xx5du0003hcva885g4xdl" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/04/15/Html/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/07/07/搭建自己的个人博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">&#39;搭建自己的个人博客&#39;</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/15/Html/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/09/JS的for循环总是弹出最后一个值/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/07/搭建自己的个人博客/">&#39;搭建自己的个人博客&#39;</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/07/我的第一篇博客/">我的第一篇博客</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/07/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
